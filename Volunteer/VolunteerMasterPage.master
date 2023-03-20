@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="VolunteerMasterPage.master.cs" Inherits="Volunteer_VolunteerMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title></title>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .style1
+        {
+            font-size: x-large;
+            color: #FF0000;
+        }
+        .style2
+        {
+            width: 190px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+      
+        
+       
+        <table style="width:100%;">
+            <tr>
+                <td colspan="2">
+                    <asp:Image ID="Image1" runat="server" Height="131px" ImageUrl="~/Photo/Blood Donor.jpg" 
+                        style="margin-bottom: 0px" Width="100%" />
+                </td>
+            </tr>
+            <tr>
+                <td class="style2">
+                    <asp:Image class="w3-circle" ID="imgup" runat="server" Height="200px" Width="200px" 
+                        BorderStyle="Solid" ImageAlign="Top" 
+                        style="margin-right: 0px; margin-top: 0px" ForeColor="Maroon" />
+
+
+
+
+
+                    <br />
+                    <span class="style1">Name:</span>&nbsp;
+                    <asp:Label ID="lblname" runat="server" Font-Size="Large" ForeColor="#FF3300" 
+                        style="font-size: x-large; text-decoration: underline"></asp:Label>
+                    <br />
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Volunteer/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Edit Profile" Value="Edit Profile" 
+                                NavigateUrl="~/Volunteer/EditProfile.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Search" Value="Search" 
+                                NavigateUrl="~/Volunteer/Search.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Change Password" Value="Change Password" 
+                                NavigateUrl="~/Volunteer/ChangePassword.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Volunteer/ShowNotice.aspx" Text="ShowNotice" 
+                                Value="ShowNotice"></asp:MenuItem>
+                            <asp:MenuItem Text="LogOut" Value="LogOut" 
+                                NavigateUrl="~/Volunteer/LogOut.aspx"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle BackColor="#75240E" BorderStyle="Ridge" Font-Bold="False" 
+                            Font-Size="Large" ForeColor="White" HorizontalPadding="5px" 
+                            VerticalPadding="10px" />
+                    </asp:Menu>
+                </td>
+                <td>
+                <div id="box">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    
+                    </div>
+                </td>
+            </tr>
+        </table>
+      
+        
+       
+    </div>
+    </form>
+</body>
+</html>

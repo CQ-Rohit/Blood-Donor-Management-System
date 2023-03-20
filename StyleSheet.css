@@ -1,0 +1,21 @@
+﻿body 
+{
+    
+}
+ #box
+ {
+     
+    width:1000px;
+    height:800px;
+    background-color:Gray;
+    border: 15px solid green;
+    margin-left: 0px;
+    padding: 50px;
+     margin: 20px;
+}
+
+.round
+    {
+    border-radius:8px;
+    
+    }

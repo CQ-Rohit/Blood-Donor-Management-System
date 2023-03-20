@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Admin_AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <title></title>
+    
+    <style type="text/css">
+        .style1
+        {
+            width: 191px;
+        }
+        .style2
+        {
+            height: 88px;
+        }
+        .style3
+        {
+            font-size: x-large;
+            color: #FF3300;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+       
+        <table style="width:100%;">
+            <tr>
+                <td colspan="2" class="style2">
+                    <asp:Image ID="Image1" runat="server" Height="92px" 
+                        ImageUrl="~/Photo/Blood Donor.jpg" Width="100%" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center" class="style1">
+                    <br />
+                    <strong><span class="style3">
+                    <asp:Image class="w3-circle" ID="Image3" runat="server" BorderStyle="Solid" Height="200px" 
+                        ImageUrl="~/Photo/admin.png" style="margin-left: 0px; margin-top: 0px" 
+                        Width="200px" ForeColor="#990000" />
+
+
+
+
+                    Name:</span></strong>
+                    <asp:Label ID="Label1" runat="server" 
+                        style="font-size: x-large; color: #FF0000; text-decoration: underline" 
+                        Text="Admin"></asp:Label>
+                    <asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Admin/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Show General User" Value="Show General User" 
+                                NavigateUrl="~/Admin/ShowGeneralUser.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Show Volunteer" Value="Show Volunteer" 
+                                NavigateUrl="~/Admin/ShowVolunteer.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Notice" Value="Notice" NavigateUrl="~/Admin/Notice.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Logout" Value="Logout" NavigateUrl="~/Admin/Logout.aspx"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle BackColor="Maroon" BorderStyle="Inset" Font-Bold="True" 
+                            Font-Size="Large" ForeColor="White" HorizontalPadding="5px" 
+                            VerticalPadding="10px" />
+                    </asp:Menu>
+                </td>
+                <td>
+                <div id="box">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+    </form>
+</body>
+</html>

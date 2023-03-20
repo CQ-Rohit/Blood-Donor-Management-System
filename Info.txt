@@ -1,0 +1,20 @@
+Blood Donor Managment System
+---------------------------
+
+1) General		2) Volunteer		3) Admin
+
+1.Home
+2.AboutUs
+3.Edit Profile
+4.Search
+5.Show Notice
+6.Change Password
+7.Logout
+
+
+Admin Login
+-----------
+Username : admin 
+Password : super
+
+
